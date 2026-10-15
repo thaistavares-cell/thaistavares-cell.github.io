@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thais Tavares · Ciência da Computação</title>
-  <meta property="og:title" content="Thais Marinho Tavares — Portfólio">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Thais Marinho Tavares — Vitrine profissional">
   <meta property="og:description" content="Estudante de Ciência da Computação no UniCEUB. Projetos em sistemas, dados e arquitetura de software, do conceito ao código.">
   <meta property="og:image" content="https://thaistavares-cell.github.io/assets/img/capa.png">
   <meta property="og:url" content="https://thaistavares-cell.github.io">
@@ -44,6 +45,10 @@
         Estudante de Ciência da Computação no UniCEUB, em transição de carreira
         para a área de TI.
       </p>
+      <div class="terminal">
+        <div class="terminal-barra"><span></span><span></span><span></span></div>
+        <pre id="terminal-texto"></pre>
+      </div>
       <div class="botoes">
         <a class="btn" href="#projetos">Ver projetos</a>
       </div>
@@ -64,7 +69,7 @@
         minha evolução: os conceitos que aprendi e os projetos que desenvolvi.
       </p>
       <ul class="tags">
-        <li>Python</li><li>PostgreSQL</li><li>Supabase</li><li>Git</li><li>GitHub</li><li>HTML</li><li>CSS</li>
+        <li>Python</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li><li>Cloudflare R2</li><li>fal.ai</li><li>Claude API</li><li>Git</li><li>GitHub</li><li>HTML</li><li>CSS</li>
       </ul>
     </section>
 
@@ -78,7 +83,7 @@
         <article class="card">
           <p class="card-num">01</p>
           <h3>Portfolio Hub</h3>
-          <p>Vitrine acadêmica: repositório público com minha produção acadêmica, publicado como site. Projeto do Bootcamp I.</p>
+          <p>Vitrine acadêmica: repositório público com minha produção acadêmica, publicado como site. Projeto do Bootcamp I. Inclui as decisões técnicas por trás do site.</p>
           <ul class="tags"><li>HTML</li><li>CSS</li><li>GitHub Pages</li></ul>
           <a href="https://github.com/thaistavares-cell/thaistavares-cell.github.io/tree/main/projetos-academicos/portfolio-hub" target="_blank" rel="noopener">Ver projeto →</a>
         </article>
@@ -94,8 +99,8 @@
         <article class="card">
           <p class="card-num">03</p>
           <h3>ETD: É Tudo Detalhe</h3>
-          <p>Marca de moda feminina construída como um sistema: infraestrutura, dados e governança antes do produto.</p>
-          <ul class="tags"><li>TypeScript</li><li>Supabase</li><li>GitHub Actions</li></ul>
+          <p>Marca de moda feminina construída como um sistema: infraestrutura, dados e governança antes do produto. Inclui uma gramática visual própria e um Creative Engine, pipeline de geração de imagens com IA guiado por ela.</p>
+          <ul class="tags"><li>TypeScript</li><li>Supabase</li><li>Cloudflare R2</li><li>IA generativa</li><li>GitHub Actions</li></ul>
           <a href="https://github.com/thaistavares-cell/thaistavares-cell.github.io/tree/main/projetos-pessoais/etd-e-tudo-detalhe" target="_blank" rel="noopener">Ver projeto →</a>
         </article>
 
@@ -116,6 +121,43 @@
   <footer>
     <p>© 2026 Thais Tavares · Publicado com GitHub Pages</p>
   </footer>
+
+  <!-- ===== TERMINAL: efeito de digitação =====
+       Escreve as linhas uma letra por vez; com movimento reduzido
+       ativado no sistema, mostra o texto completo de uma vez. -->
+  <script>
+    const linhas = [
+      "> whoami",
+      "Thais Marinho Tavares",
+      "> cat foco.txt",
+      "sistemas · dados · arquitetura"
+    ];
+    const saida = document.getElementById("terminal-texto");
+    let linha = 0;
+    let letra = 0;
+    const reduzirMovimento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function digitar() {
+      if (linha >= linhas.length) return;
+      const atual = linhas[linha];
+      if (letra < atual.length) {
+        saida.textContent += atual[letra];
+        letra++;
+        setTimeout(digitar, 60);
+      } else {
+        saida.textContent += "\n";
+        linha++;
+        letra = 0;
+        setTimeout(digitar, 400);
+      }
+    }
+
+    if (reduzirMovimento) {
+      saida.textContent = linhas.join("\n");
+    } else {
+      digitar();
+    }
+  </script>
 
 </body>
 </html>

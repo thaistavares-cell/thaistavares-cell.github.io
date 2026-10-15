@@ -25,6 +25,21 @@ publicá-lo como site com o GitHub Pages.
 - Layout responsivo, ajustado para computador e celular
 - Fluxo de trabalho com Git: clone, commit e push a partir do VS Code
 
+## Como este site foi feito
+
+- **HTML, CSS e um pouco de JavaScript, sem framework.** Um site deste tamanho
+  não precisa de framework: carrega mais rápido e eu entendo cada linha do código.
+- **GitHub Pages.** A hospedagem sai direto do repositório. Cada envio para o
+  GitHub publica a nova versão automaticamente.
+- **HTML semântico.** Tags como `header`, `main`, `section` e `footer` descrevem a
+  função de cada parte da página, o que ajuda leitores de tela e mecanismos de busca.
+- **Open Graph.** Tags que definem o título, a descrição e a imagem do cartão que
+  aparece quando o link é compartilhado no WhatsApp ou no LinkedIn.
+- **Acessibilidade.** A animação da abertura respeita a preferência de movimento
+  reduzido do sistema operacional.
+- **Commits convencionais.** As mensagens seguem o padrão `tipo(escopo): descrição`,
+  para o histórico ser fácil de ler.
+
 ## O que aprendi
 
 - Como o GitHub Pages publica um site direto de um repositório

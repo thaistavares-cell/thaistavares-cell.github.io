@@ -22,6 +22,7 @@ thaistavares-cell.github.io/
 ├── assets/               → arquivos de apoio do site
 │   ├── css/style.css     → aparência do site
 │   └── img/              → imagens
+│       └── favicon.svg   → ícone da aba do navegador
 ├── projetos-academicos/  → trabalhos estruturados do curso
 │   └── portfolio-hub/
 └── projetos-pessoais/    → iniciativas próprias e experimentações
@@ -35,11 +36,11 @@ thaistavares-cell.github.io/
 |---|---|---|
 | [Portfolio Hub](projetos-academicos/portfolio-hub/) | Vitrine acadêmica: repositório público com minha produção acadêmica, publicado como site. Projeto do Bootcamp I. | HTML, CSS, GitHub Pages |
 | [Monitor de Editais](projetos-pessoais/monitor-de-editais/) | Sistema que acompanha automaticamente a publicação de editais de contratação pública e mantém um histórico do que foi publicado. | TypeScript, GitHub Actions, API do PNCP |
-| [ETD: É Tudo Detalhe](projetos-pessoais/etd-e-tudo-detalhe/) | Marca de moda feminina construída como um sistema: infraestrutura, dados e governança antes do produto. | TypeScript, Node.js, Supabase (PostgreSQL), GitHub Actions |
+| [ETD: É Tudo Detalhe](projetos-pessoais/etd-e-tudo-detalhe/) | Marca de moda feminina construída como um sistema: infraestrutura, dados e governança antes do produto. Inclui gramática visual própria e Creative Engine (geração de imagens com IA). | TypeScript, Node.js, Supabase (PostgreSQL), GitHub Actions, Cloudflare R2, IA generativa |
 
 ## Tecnologias e ferramentas
 
-Python · PostgreSQL · Supabase · Git · GitHub · HTML · CSS
+Python · TypeScript · PostgreSQL · Supabase · Cloudflare R2 · fal.ai · Claude API · Git · GitHub · HTML · CSS
 
 ## Contato
 
