@@ -1,0 +1,95 @@
+/* ===== VARIÁVEIS: cores e medidas usadas no site inteiro =====
+   Mudou aqui, muda em todo lugar. */
+:root {
+  --fundo: #faf8f5;
+  --texto: #1f1b24;
+  --suave: #6b6472;
+  --destaque: #8a1c5f;
+  --linha: #e6e1e8;
+  --cartao: #ffffff;
+  --largura: 960px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.6;
+}
+
+a { color: var(--destaque); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ===== CABEÇALHO ===== */
+.topo {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 16px; flex-wrap: wrap;
+  padding: 16px max(16px, calc((100% - var(--largura)) / 2));
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--linha);
+}
+.marca { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; color: var(--texto); }
+.topo nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.topo nav a { color: var(--suave); font-size: .95rem; }
+
+/* ===== BANNER =====
+   Mesma linguagem da capa do LinkedIn: faixa 4:1 com os pés e o reflexo.
+   object-position: bottom mantém a parte de baixo da imagem na faixa;
+   o que não cabe é cortado em cima. */
+.banner { aspect-ratio: 4 / 1; overflow: hidden; background: #050b1c; }
+.banner img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
+
+/* ===== SEÇÕES ===== */
+main { max-width: var(--largura); margin: 0 auto; padding: 0 16px; }
+section { padding: 72px 0; border-bottom: 1px solid var(--linha); }
+h1, h2, h3 { font-family: "Fraunces", serif; font-weight: 600; line-height: 1.2; }
+h2 { font-size: 2rem; margin-bottom: 24px; }
+section p + p { margin-top: 16px; }
+
+.hero { padding: 96px 0 80px; }
+.rotulo { text-transform: uppercase; letter-spacing: .15em; font-size: .8rem; color: var(--destaque); font-weight: 600; margin-bottom: 16px; }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); max-width: 18ch; }
+.lead { font-size: 1.15rem; color: var(--suave); margin: 24px 0 32px; max-width: 55ch; }
+
+.botoes { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 12px 22px; border-radius: 999px;
+  background: var(--destaque); color: #fff; font-weight: 500;
+}
+.btn:hover { text-decoration: none; opacity: .9; }
+.btn-ghost { background: transparent; color: var(--destaque); border: 1px solid var(--destaque); }
+
+/* ===== ETIQUETAS (tags) ===== */
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.tags li { font-size: .8rem; padding: 4px 12px; border-radius: 999px; background: #f1e6ee; color: var(--destaque); }
+
+/* ===== GRADE DE PROJETOS ===== */
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card {
+  background: var(--cartao); border: 1px solid var(--linha); border-radius: 16px;
+  padding: 24px; display: flex; flex-direction: column; gap: 8px;
+}
+.card-num { font-family: "Fraunces", serif; color: var(--destaque); font-size: 1.1rem; }
+.card h3 { font-size: 1.3rem; }
+.card p { color: var(--suave); }
+.card .tags { margin-top: 4px; }
+.card > a { margin-top: auto; padding-top: 12px; font-weight: 500; }
+
+/* ===== LISTAS (contato) ===== */
+.lista { display: grid; gap: 12px; }
+.item {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 18px 22px; border: 1px solid var(--linha); border-radius: 12px; background: var(--cartao);
+  color: var(--texto);
+}
+.item:hover { border-color: var(--destaque); text-decoration: none; }
+.item span { font-weight: 600; }
+.item small { color: var(--suave); }
+
+footer { text-align: center; padding: 40px 16px; color: var(--suave); font-size: .85rem; }
