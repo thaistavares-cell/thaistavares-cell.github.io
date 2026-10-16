@@ -7,6 +7,7 @@ Estudante de Ciência da Computação no UniCEUB, com foco em sistemas, dados e 
 Venho da Administração, de onde trouxe o olhar para processos e para como cada decisão influencia o todo. Hoje estudo como os sistemas funcionam por dentro, para construí-los, e não só operá-los.
 
 🌐 **Site:** [thaistavares-cell.github.io](https://thaistavares-cell.github.io)
+
 💼 **LinkedIn:** [linkedin.com/in/thaismarinhotavares](https://www.linkedin.com/in/thaismarinhotavares)
 
 ---
