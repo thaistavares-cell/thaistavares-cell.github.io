@@ -1,7 +1,11 @@
 # Projetos acadêmicos
 
-Trabalhos estruturados do curso de Ciência da Computação (UniCEUB).
+Trabalhos do curso de Ciência da Computação (UniCEUB), organizados por semestre e disciplina. Esta pasta reúne apenas as versões finais.
 
-- [Portfolio Hub: vitrine acadêmica](portfolio-hub/) — repositório e site de portfólio, projeto da disciplina Bootcamp I.
+## 1º semestre
 
-Os próximos trabalhos do curso entram nesta lista.
+| Disciplina | Trabalho |
+|---|---|
+| Bootcamp I | [Portfolio Hub: vitrine acadêmica](01-primeiro-semestre/bootcamp-i/portfolio-hub/): repositório e site de portfólio |
+
+As demais disciplinas do semestre (Lógica de Programação, Introdução à Computação, Organização e Arquitetura de Computadores, Banco de Dados I e Matemática para Computação) ganham pasta própria quando houver um trabalho final publicado.
